@@ -43,11 +43,10 @@
     "require-relative": "^0.8.7",
     "slash": "^3.0.0",
     "source-map": "^0.7.3",
-    "svelte-hmr": "^0.12.6"
+    "svelte-hmr": "^0.13.0-2"
   },
   "peerDependencies": {
     "svelte": "^3.32.3",
-    "svelte-hmr": "^0.12.6",
     "vite": "^2.0.2"
   },
   "devDependencies": {

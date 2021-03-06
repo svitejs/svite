@@ -6,9 +6,7 @@ import { SvelteRequest } from './id'
 import { safeBase64Hash } from './hash'
 import { log } from './log'
 
-const makeHot = createMakeHot({ walk })
-
-export async function compileSvelte(
+const _createCompileSvelte = (makeHot: Function) => async function compileSvelte(
   svelteRequest: SvelteRequest,
   code: string,
   options: Partial<ResolvedOptions>
@@ -55,7 +53,7 @@ export async function compileSvelte(
   }
 
   // only apply hmr when not in ssr context and hot options are set
-  if (!ssr && options.hot) {
+  if (!ssr && makeHot) {
     compiled.js.code = makeHot({
       id: filename,
       compiledCode: compiled.js.code,
@@ -84,6 +82,11 @@ export async function compileSvelte(
   cacheCompileData(result)
 
   return result
+}
+
+export function createCompileSvelte({ hot = false, hotApi = '', adapter = '' }) {
+  const makeHot = hot && createMakeHot({ walk, hotApi, adapter })
+  return _createCompileSvelte(makeHot)
 }
 
 function useStableCssClass(js: Code, css: Code, cssId: string) {

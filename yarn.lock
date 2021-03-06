@@ -859,7 +859,7 @@
     require-relative "^0.8.7"
     slash "^3.0.0"
     source-map "^0.7.3"
-    svelte-hmr "^0.12.6"
+    svelte-hmr "0.13.0-1"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -7963,10 +7963,20 @@ svelte-check@^1.1.35:
     svelte-preprocess "^4.0.0"
     typescript "*"
 
+svelte-hmr@0.13.0-1:
+  version "0.13.0-1"
+  resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.13.0-1.tgz#d91883eabb0cd65b33558e6ff64eac890fea052e"
+  integrity sha512-C56ferNlsk7E4PDsjwZT1vwCb7iCk/8wSn/XIGAsN6UD2nzeCaEfsd4666el7+5t2z+Fx06M66Go3mwbHFsOYQ==
+
 svelte-hmr@^0.12.6:
   version "0.12.6"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.12.6.tgz#8db574511a61a9473e62739b5043ac87d76b0430"
   integrity sha512-q08BjoUSbwXpKo9ij6aym93jBrt7K8eutLwix5Y9cuSFLS5djxumOoUVsSzDkdKssLlg5X//Kg/0MWHHBeQRTg==
+
+svelte-hmr@^0.13.0-2:
+  version "0.13.0-2"
+  resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.13.0-2.tgz#12a28df6754a22e8e40aec848a62c6388ae5920e"
+  integrity sha512-3Sqxbs5hG212oweKhHzh2S7jVScylzbVXuEkydgdS9NpvcdnyCSufpaJSUNxUGc02wgjWugtqaJXs1DybAjRpw==
 
 svelte-preprocess@^4.0.0, svelte-preprocess@^4.6.9:
   version "4.6.9"

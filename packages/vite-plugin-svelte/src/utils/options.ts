@@ -66,7 +66,6 @@ export function resolveOptions(
     compilerOptions.dev = true
     resolvedOptions.hot = {
       ...resolvedOptions.hot,
-      absoluteImports: false,
       injectCss: !resolvedOptions.emitCss
     }
   } else {
@@ -147,6 +146,9 @@ export interface Options {
         injectCss?: boolean
         cssEjectDelay: number
         absoluteImports: boolean
+
+        hotApi?: string
+        adapter?: string
       }
 }
 
