@@ -1,9 +1,8 @@
-import { getCompileData } from './utils/compile'
-
 import { ModuleNode, HmrContext } from 'vite'
 import { CompileData } from './utils/compile'
 import { log } from './utils/log'
 import { SvelteRequest } from './utils/id'
+import { VitePluginSvelteCache } from './utils/VitePluginSvelteCache'
 
 /**
  * Vite-specific HMR handling
@@ -11,10 +10,11 @@ import { SvelteRequest } from './utils/id'
 export async function handleHotUpdate(
   compileSvelte: Function,
   ctx: HmrContext,
-  svelteRequest: SvelteRequest
+  svelteRequest: SvelteRequest,
+  cache: VitePluginSvelteCache
 ): Promise<ModuleNode[] | void> {
   const { read, server } = ctx
-  const cachedCompileData = getCompileData(svelteRequest, false)
+  const cachedCompileData = cache.getCompileData(svelteRequest, false)
   if (!cachedCompileData) {
     // file hasn't been requested yet (e.g. async component)
     log.debug(`handleHotUpdate first call ${svelteRequest.id}`)
@@ -27,6 +27,8 @@ export async function handleHotUpdate(
     content,
     cachedCompileData.options
   )
+  cache.setCompileData(compileData)
+
   const affectedModules = new Set<ModuleNode | undefined>()
 
   const cssModule = server.moduleGraph.getModuleById(svelteRequest.cssId)
@@ -43,6 +45,20 @@ export async function handleHotUpdate(
 
   const result = [...affectedModules].filter(Boolean) as ModuleNode[]
   log.debug(`handleHotUpdate result for ${svelteRequest.id}`, result)
+
+  // TODO is this enough? see also: https://github.com/vitejs/vite/issues/2274
+  const ssrModulesToInvalidate = result.filter((m) => !!m.ssrTransformResult)
+  if (ssrModulesToInvalidate.length > 0) {
+    log.debug(
+      `invalidating modules ${ssrModulesToInvalidate
+        .map((m) => m.id)
+        .join(', ')}`
+    )
+    ssrModulesToInvalidate.forEach((moduleNode) =>
+      server.moduleGraph.invalidateModule(moduleNode)
+    )
+  }
+
   return result
 }
 

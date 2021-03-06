@@ -13,7 +13,7 @@ import * as relative from 'require-relative'
 
 import { handleHotUpdate } from './handleHotUpdate'
 import { log } from './utils/log'
-import { createCompileSvelte, getCompileData } from './utils/compile'
+import { createCompileSvelte } from './utils/compile'
 import { buildIdParser, IdParser } from './utils/id'
 import {
   buildInitialOptions,
@@ -21,12 +21,14 @@ import {
   ResolvedOptions,
   resolveOptions
 } from './utils/options'
+import { VitePluginSvelteCache } from './utils/VitePluginSvelteCache'
 
 export {
   Options,
   Preprocessor,
   PreprocessorGroup,
   CompileOptions,
+  CssHashGetter,
   Arrayable,
   MarkupPreprocessor,
   ModuleFormat,
@@ -40,15 +42,19 @@ const svelte_packages = [
   'svelte/motion',
   'svelte/store',
   'svelte/transition',
-  'svelte'
+  'svelte',
+  'svelte-hmr/runtime/hot-api-esm.js',
+  'svelte-hmr/runtime/proxy-adapter-dom.js',
+  'svelte-hmr'
 ]
+
 const pkg_export_errors = new Set()
 
 export default function vitePluginSvelte(rawOptions: Options): Plugin {
   if (process.env.DEBUG != null) {
     log.setLevel('debug')
   }
-
+  const cache = new VitePluginSvelteCache()
   const initialOptions = buildInitialOptions(rawOptions)
 
   // updated in configResolved hook
@@ -91,8 +97,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
       // extra vite config
       return {
         optimizeDeps: {
-          // TODO exclude svelte is needed here otherwise using libraries like routify leads to two sveltes at runtime
-          exclude: ['svelte', 'svelte-hmr']
+          exclude: [...svelte_packages]
         },
         resolve: {
           mainFields: ['svelte'],
@@ -107,6 +112,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
     },
 
     configureServer(_server) {
+      // eslint-disable-next-line no-unused-vars
       server = _server
     },
 
@@ -122,7 +128,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
       //
       if (query.svelte) {
         if (query.type === 'style') {
-          const compileData = getCompileData(svelteRequest, false)
+          const compileData = cache.getCompileData(svelteRequest, false)
           if (compileData?.compiled?.css) {
             log.debug(`load returns css for ${filename}`)
             return compileData.compiled.css
@@ -171,6 +177,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
           pkg_export_errors.add(name)
           return null
         }
+        // TODO is throw correct here?
         throw err
       }
 
@@ -188,7 +195,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
       }
       log.debug('transform', svelteRequest)
       const { filename, query } = svelteRequest
-      const cachedCompileData = getCompileData(svelteRequest, false)
+      const cachedCompileData = cache.getCompileData(svelteRequest, false)
 
       if (query.svelte) {
         // tagged svelte request, use cache
@@ -202,26 +209,31 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
         )
       }
 
-      if (cachedCompileData) {
+      if (cachedCompileData && !options.disableTransformCache) {
         log.debug(`transform returns cached js for ${filename}`)
         return cachedCompileData.compiled.js
       }
 
       // first request, compile here
       const compileData = await compileSvelte(svelteRequest, code, options)
+      cache.setCompileData(compileData)
       log.debug(`transform returns compiled js for ${filename}`)
       return compileData.compiled.js
     },
 
     handleHotUpdate(ctx: HmrContext): void | Promise<Array<ModuleNode> | void> {
+      if (!options.emitCss || options.disableCssHmr) {
+        return
+      }
       const svelteRequest = requestParser(ctx.file, false, ctx.timestamp)
       if (!svelteRequest) {
         return
       }
       log.debug('handleHotUpdate', svelteRequest)
-      return handleHotUpdate(compileSvelte, ctx, svelteRequest)
+      return handleHotUpdate(compileSvelte, ctx, svelteRequest, cache)
     },
 
+    // eslint-disable-next-line no-unused-vars
     transformIndexHtml(html: string, ctx: IndexHtmlTransformContext) {
       // TODO useful for ssr? and maybe svelte:head stuff
       log.debug('transformIndexHtml', html)

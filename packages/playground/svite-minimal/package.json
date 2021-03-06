@@ -8,9 +8,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@svitejs/vite-plugin-svelte": "file:../../../packages/vite-plugin-svelte",
-    "svelte": "^3.32.3",
-    "svelte-hmr": "^0.12.6",
-    "vite": "^2.0.2"
+    "svelte": "^3.35.0",
+    "svelte-hmr": "^0.12.9",
+    "vite": "^2.0.5"
   }
 }

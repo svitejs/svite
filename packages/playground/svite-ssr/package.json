@@ -14,13 +14,12 @@
 
   },
   "devDependencies": {
-    "@svitejs/vite-plugin-svelte": "file:../../../packages/vite-plugin-svelte",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "serve-static": "^1.14.1",
-    "svelte": "^3.32.3",
-    "svelte-hmr": "^0.12.6",
-    "vite": "^2.0.2"
+    "svelte": "^3.35.0",
+    "svelte-hmr": "^0.12.9",
+    "vite": "^2.0.5"
   }
 }

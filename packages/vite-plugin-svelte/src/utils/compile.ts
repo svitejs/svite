@@ -2,6 +2,8 @@ import { CompileOptions, Processed, ResolvedOptions } from './options'
 import { compile, preprocess, walk } from 'svelte/compiler'
 // @ts-ignore
 import { createMakeHot } from 'svelte-hmr'
+// @ts-ignore
+import * as relative from 'require-relative'
 import { SvelteRequest } from './id'
 import { safeBase64Hash } from './hash'
 import { log } from './log'
@@ -20,6 +22,11 @@ const _createCompileSvelte = (makeHot: Function) => async function compileSvelte
     generate: ssr ? 'ssr' : 'dom',
     css: !emitCss,
     hydratable: true
+  }
+  if (options.hot) {
+    const hash = `s-${safeBase64Hash(cssId)}`
+    log.debug(`setting cssHash ${hash} for ${cssId}`)
+    finalCompilerOptions.cssHash = () => hash
   }
 
   let preprocessed
@@ -45,11 +52,6 @@ const _createCompileSvelte = (makeHot: Function) => async function compileSvelte
   if (emitCss && compiled.css.code) {
     // TODO properly update sourcemap?
     compiled.js.code += `\nimport ${JSON.stringify(svelteRequest.cssId)};\n`
-
-    if (!ssr && options.hot) {
-      // for hmr with emitCss we need to use a stable hash, patch compiler output
-      useStableCssClass(compiled.js, compiled.css, svelteRequest.cssId)
-    }
   }
 
   // only apply hmr when not in ssr context and hot options are set
@@ -79,63 +81,12 @@ const _createCompileSvelte = (makeHot: Function) => async function compileSvelte
     ssr
   }
 
-  cacheCompileData(result)
-
   return result
 }
 
 export function createCompileSvelte({ hot = false, hotApi = '', adapter = '' }) {
   const makeHot = hot && createMakeHot({ walk, hotApi, adapter })
   return _createCompileSvelte(makeHot)
-}
-
-function useStableCssClass(js: Code, css: Code, cssId: string) {
-  // TODO is there a better way to get this?
-  const current = css.code.match(/\.svelte-[^\{]*/)![0].substring(1)
-  const stable = `s-${safeBase64Hash(cssId, 12)}`
-  if (current.length !== stable.length) {
-    // TODO do something about it. should we update sourcemaps or find a way to tell the compiler we want a specific hash
-    // see https://github.com/sveltejs/svelte/pull/4377
-    log.warn(
-      `replaced css hash ${current} with different length ${stable} for ${cssId}`
-    )
-  }
-  const currentValueRE = new RegExp(current, 'g')
-  // TODO use safer replace regex or other means. (ast?)
-  js.code = js.code.replace(currentValueRE, stable)
-  css.code = css.code.replace(currentValueRE, stable)
-}
-
-const _cache = new Map<string, CompileData>()
-const _ssrCache = new Map<string, CompileData>()
-
-function getCache(ssr: boolean): Map<string, CompileData> {
-  return ssr ? _ssrCache : _cache
-}
-
-export function getCompileData(
-  svelteRequest: SvelteRequest,
-  errorOnMissing = true
-): CompileData | undefined {
-  const cache = getCache(svelteRequest.ssr)
-  const id = svelteRequest.normalizedFilename
-  if (cache.has(id)) {
-    return cache.get(id)!
-  }
-  if (errorOnMissing) {
-    throw new Error(
-      `${id} has no corresponding entry in the ${
-        svelteRequest.ssr ? 'ssr' : ''
-      }cache. ` +
-        `This is a @svitejs/vite-plugin-svelte internal error, please open an issue.`
-    )
-  }
-}
-
-function cacheCompileData(compileData: CompileData) {
-  const cache = getCache(!!compileData.ssr)
-  const id = compileData.normalizedFilename
-  cache.set(id, compileData)
 }
 
 export interface Code {

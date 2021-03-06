@@ -1,0 +1,1 @@
+# svite-template-minimal

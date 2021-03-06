@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ResolvedConfig } from 'vite'
 import { log } from './log'
 import { loadSvelteConfig } from './loadSvelteConfig'
@@ -17,7 +18,9 @@ const knownOptions = new Set([
   'emitCss',
   'compilerOptions',
   'preprocess',
-  'hot'
+  'hot',
+  'disableTransformCache',
+  'disableCssHmr'
 ])
 
 export function buildInitialOptions(rawOptions: Options): Options {
@@ -78,6 +81,7 @@ export function resolveOptions(
 }
 
 export interface Options {
+  // eslint-disable no-unused-vars
   /** One or more minimatch patterns */
   include: Arrayable<string>
 
@@ -150,6 +154,15 @@ export interface Options {
         hotApi?: string
         adapter?: string
       }
+  /**
+   * disable separate hmr update for css files via vite
+   */
+  disableCssHmr?: boolean
+
+  /**
+   * do not return cached transform data
+   */
+  disableTransformCache?: boolean
 }
 
 export interface ResolvedOptions extends Options {
@@ -183,6 +196,7 @@ export interface CompileOptions {
   namespace?: string
   preserveComments?: boolean
   preserveWhitespace?: boolean
+  cssHash?: CssHashGetter
 }
 
 export interface Processed {
@@ -191,6 +205,13 @@ export interface Processed {
   dependencies?: string[]
   toString?: () => string
 }
+
+export declare type CssHashGetter = (args: {
+  name: string
+  filename: string | undefined
+  css: string
+  hash: (input: string) => string
+}) => string
 
 export declare type MarkupPreprocessor = (options: {
   content: string

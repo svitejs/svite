@@ -22,7 +22,7 @@ test('should render dependency import', async () => {
 
 test('should render dynamic import', async () => {
   expect(await getEl('#dynamic-import')).toBe(null)
-  let dynamicImportButton = await getEl('#button-import-dynamic')
+  const dynamicImportButton = await getEl('#button-import-dynamic')
   expect(dynamicImportButton).toBeDefined()
   await dynamicImportButton.click()
   await untilUpdated(() => getText('#dynamic-import .label'), 'dynamic-import')
@@ -84,8 +84,8 @@ if (!isBuild) {
       // update script, change label value
       await updateHmrTest((content) =>
         content.replace(
-          "const label = 'hmr-test';",
-          "const label = 'hmr-test-updated';"
+          "const label = 'hmr-test'",
+          "const label = 'hmr-test-updated'"
         )
       )
       expect(await getText(`#hmr-test-1 .label`)).toBe('hmr-test-updated')

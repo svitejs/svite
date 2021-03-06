@@ -1,15 +1,7 @@
-<script type="text/javascript">
-  import Nested from './Nested.svelte';
-  export let name = '';
+<script>
+  import Nested from './Nested.svelte'
+  export let name = ''
 </script>
-
-<style type="text/stylus">
-  /* prettier-ignore */
-  .note
-    color #ff3e00
-  h1
-    color green
-</style>
 
 <!-- prettier-ignore -->
 <template type="text/pug">
@@ -21,3 +13,11 @@
   br
   Nested("{name}")
 </template>
+
+<style lang="stylus">
+  /* prettier-ignore */
+  .note
+    color #ff3e00
+  h1
+    color green
+</style>

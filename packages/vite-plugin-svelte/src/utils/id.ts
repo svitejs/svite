@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 import qs from 'querystring'
 import { createFilter } from '@rollup/pluginutils'
 import { Arrayable, ResolvedOptions } from './options'
 
 export type SvelteQueryTypes = 'style' | 'script'
 
+// TODO get the value from vite config
 const viteVirtualIdPrefix = '/@id/'
 
 export interface SvelteQuery {
@@ -27,7 +29,9 @@ function parseToSvelteRequest(
   timestamp: number,
   ssr: boolean
 ): SvelteRequest {
-  let [filename, rawQuery] = id.split(`?`, 2)
+  const parts = id.split(`?`, 2)
+  let filename = parts[0]
+  const rawQuery = parts[1]
   const query = qs.parse(rawQuery) as SvelteQuery
   if (query.svelte != null) {
     query.svelte = true
@@ -62,11 +66,13 @@ function stripVirtualImportId(filename: string, type?: SvelteQueryTypes) {
 function createVirtualImportId(
   id: string,
   type: SvelteQueryTypes,
+  // eslint-disable-next-line no-unused-vars
   timestamp: number
 ) {
   if (type === 'style') {
     id = `${id}.css`
   }
+  // TODO rixo suggested adding another timestamp cachebuster here, test it
   return `${id}?svelte&type=${type}`
 }
 
