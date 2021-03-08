@@ -64,25 +64,14 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
     name: 'vite-plugin-svelte',
     // make sure our resolver runs before vite internal resolver to resolve svelte field correctly
     enforce: 'pre',
-    config(config, { mode, command }): Partial<UserConfig> {
+    config(config): Partial<UserConfig> {
       // setup logger
       if (process.env.DEBUG) {
         log.setLevel('debug')
       } else if (config.logLevel) {
         log.setLevel(config.logLevel)
       }
-      // init compiler
-      compileSvelte = createCompileSvelte({
-        hot:
-          options.hot !== false &&
-          mode === 'development' &&
-          command === 'serve',
-        // TODO fix TS (sorry)
-        // @ts-ignore
-        hotApi: options?.hot?.hotApi,
-        // @ts-ignore
-        adapter: options?.hot?.adapter
-      })
+
       // extra vite config
       const extraViteConfig = {
         optimizeDeps: {
@@ -100,6 +89,8 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
     configResolved(config) {
       options = resolveOptions(options, config)
       requestParser = buildIdParser(options)
+      // init compiler
+      compileSvelte = createCompileSvelte(options, config)
     },
 
     configureServer(_server) {

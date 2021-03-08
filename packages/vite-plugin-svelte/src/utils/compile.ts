@@ -1,12 +1,22 @@
-import { CompileOptions, Processed, ResolvedOptions } from './options'
+import {
+  CompileOptions,
+  PreprocessorGroup,
+  Processed,
+  ResolvedOptions
+} from './options'
 import { compile, preprocess, walk } from 'svelte/compiler'
 // @ts-ignore
 import { createMakeHot } from 'svelte-hmr'
 import { SvelteRequest } from './id'
 import { safeBase64Hash } from './hash'
 import { log } from './log'
+import { ResolvedConfig } from 'vite'
+import { createSvelteStylePreprocessorFromVite } from './preprocess'
 
-const _createCompileSvelte = (makeHot: Function) =>
+const _createCompileSvelte = (
+  makeHot: Function,
+  cssPreprocessor: PreprocessorGroup
+) =>
   async function compileSvelte(
     svelteRequest: SvelteRequest,
     code: string,
@@ -29,8 +39,17 @@ const _createCompileSvelte = (makeHot: Function) =>
     }
 
     let preprocessed
+    const preprocessors = []
     if (options.preprocess) {
-      preprocessed = await preprocess(code, options.preprocess, { filename })
+      if (Array.isArray(options.preprocess)) {
+        preprocessors.push(...options.preprocess)
+      } else {
+        preprocessors.push(options.preprocess)
+      }
+    }
+    preprocessors.push(cssPreprocessor)
+    if (preprocessors.length > 0) {
+      preprocessed = await preprocess(code, preprocessors, { filename })
       if (preprocessed.dependencies)
         dependencies.push(...preprocessed.dependencies)
       if (preprocessed.map) finalCompilerOptions.sourcemap = preprocessed.map
@@ -83,13 +102,27 @@ const _createCompileSvelte = (makeHot: Function) =>
     return result
   }
 
-export function createCompileSvelte({
-  hot = false,
-  hotApi = '',
-  adapter = ''
-}) {
+export function createCompileSvelte(
+  options: ResolvedOptions,
+  config: ResolvedConfig
+) {
+  const hot =
+    options.hot !== false &&
+    config.mode === 'development' &&
+    config.command === 'serve'
+  // @ts-ignore
+  const hotApi = options?.hot?.hotApi
+  // @ts-ignore
+  const adapter = options?.hot?.adapter
+
   const makeHot = hot && createMakeHot({ walk, hotApi, adapter })
-  return _createCompileSvelte(makeHot)
+  const viteCssPlugin = config.plugins.find(
+    (p) => p.name === 'vite:css'
+  ) as Plugin
+  const sveltePreprocessViteCss = createSvelteStylePreprocessorFromVite(
+    viteCssPlugin
+  )
+  return _createCompileSvelte(makeHot, sveltePreprocessViteCss)
 }
 
 export interface Code {
