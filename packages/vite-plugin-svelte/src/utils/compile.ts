@@ -11,11 +11,11 @@ import { SvelteRequest } from './id'
 import { safeBase64Hash } from './hash'
 import { log } from './log'
 import { ResolvedConfig } from 'vite'
-import { createSvelteStylePreprocessorFromVite } from './preprocess'
+import { buildExtraPreprocessors } from './preprocess'
 
 const _createCompileSvelte = (
   makeHot: Function,
-  cssPreprocessor: PreprocessorGroup
+  extraPreprocessors: PreprocessorGroup[]
 ) =>
   async function compileSvelte(
     svelteRequest: SvelteRequest,
@@ -47,7 +47,7 @@ const _createCompileSvelte = (
         preprocessors.push(options.preprocess)
       }
     }
-    preprocessors.push(cssPreprocessor)
+    preprocessors.push(...(extraPreprocessors || []))
     if (preprocessors.length > 0) {
       preprocessed = await preprocess(code, preprocessors, { filename })
       if (preprocessed.dependencies)
@@ -102,27 +102,25 @@ const _createCompileSvelte = (
     return result
   }
 
+function buildMakeHot(options: ResolvedOptions) {
+  const needsMakeHot =
+    options.hot !== false && options.isServe && !options.isProduction
+  if (needsMakeHot) {
+    // @ts-ignore
+    const hotApi = options?.hot?.hotApi
+    // @ts-ignore
+    const adapter = options?.hot?.adapter
+    return createMakeHot({ walk, hotApi, adapter, hotOptions: options.hot })
+  }
+}
+
 export function createCompileSvelte(
   options: ResolvedOptions,
   config: ResolvedConfig
 ) {
-  const hot =
-    options.hot !== false &&
-    config.mode === 'development' &&
-    config.command === 'serve'
-  // @ts-ignore
-  const hotApi = options?.hot?.hotApi
-  // @ts-ignore
-  const adapter = options?.hot?.adapter
-
-  const makeHot = hot && createMakeHot({ walk, hotApi, adapter })
-  const viteCssPlugin = config.plugins.find(
-    (p) => p.name === 'vite:css'
-  ) as Plugin
-  const sveltePreprocessViteCss = createSvelteStylePreprocessorFromVite(
-    viteCssPlugin
-  )
-  return _createCompileSvelte(makeHot, sveltePreprocessViteCss)
+  const makeHot = buildMakeHot(options)
+  const extraPreprocessors = buildExtraPreprocessors(options, config)
+  return _createCompileSvelte(makeHot, extraPreprocessors)
 }
 
 export interface Code {
@@ -130,6 +128,7 @@ export interface Code {
   map?: any
   dependencies?: any[]
 }
+
 export interface Compiled {
   js: Code
   css: Code

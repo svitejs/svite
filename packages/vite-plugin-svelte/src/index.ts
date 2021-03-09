@@ -4,8 +4,7 @@ import {
   IndexHtmlTransformContext,
   ModuleNode,
   Plugin,
-  UserConfig,
-  ViteDevServer
+  UserConfig
 } from 'vite'
 
 // @ts-ignore
@@ -54,10 +53,6 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
     root: process.cwd()
   }
 
-  // updated in configureServer hook
-  // @ts-ignore
-  let server: ViteDevServer
-
   let compileSvelte: Function
 
   return {
@@ -93,9 +88,9 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
       compileSvelte = createCompileSvelte(options, config)
     },
 
-    configureServer(_server) {
+    configureServer(server) {
       // eslint-disable-next-line no-unused-vars
-      server = _server
+      options.server = server
     },
 
     load(id, ssr) {
