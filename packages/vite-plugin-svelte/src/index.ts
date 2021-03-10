@@ -69,6 +69,13 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
 
       // extra vite config
       const extraViteConfig = {
+        esbuild: {
+          tsconfigRaw: {
+            compilerOptions: {
+              importsNotUsedAsValues: 'preserve'
+            }
+          }
+        },
         optimizeDeps: {
           exclude: [...SVELTE_IMPORTS]
         },
@@ -78,7 +85,7 @@ export default function vitePluginSvelte(rawOptions: Options): Plugin {
         }
       }
       log.debug('additional vite config', extraViteConfig)
-      return extraViteConfig
+      return extraViteConfig as Partial<UserConfig>
     },
 
     configResolved(config) {

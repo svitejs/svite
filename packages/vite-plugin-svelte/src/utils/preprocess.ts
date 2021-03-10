@@ -1,8 +1,8 @@
-import { Plugin, ResolvedConfig, TransformResult } from 'vite'
-import { PreprocessorGroup, ResolvedOptions } from './options'
+import { ResolvedConfig, TransformResult } from 'vite'
+import { Preprocessor, PreprocessorGroup, ResolvedOptions } from './options'
 import { TransformPluginContext } from 'rollup'
 // import type { WindiPluginUtils } from '@windicss/plugin-utils'
-const supportedLangs = [
+const supportedStyleLangs = [
   'css',
   'less',
   'sass',
@@ -12,36 +12,69 @@ const supportedLangs = [
   'postcss'
 ]
 
-export function createViteStylePreprocessor(
-  cssPlugin: Plugin,
-  options: ResolvedOptions
-): PreprocessorGroup {
-  const cssTransform = cssPlugin.transform!.bind(
+const supportedScriptLangs = ['ts']
+
+function createPreprocessorFromVitePlugin(
+  config: ResolvedConfig,
+  options: ResolvedOptions,
+  pluginName: string,
+  supportedLangs: string[]
+): Preprocessor {
+  const plugin = config.plugins.find((p) => p.name === pluginName)
+  if (!plugin) {
+    throw new Error(`failed to find plugin ${pluginName}`)
+  }
+  if (!plugin.transform) {
+    throw new Error(`plugin ${pluginName} has no transform`)
+  }
+  const pluginTransform = plugin.transform!.bind(
     (null as unknown) as TransformPluginContext
   )
-  return {
-    style: async ({ attributes, content, filename }) => {
-      const lang = attributes.lang as string
-      if (!supportedLangs.includes(lang)) {
-        return { code: content }
-      }
-      const stylePreprocessModuleId = `${filename}.${lang}`
-      const moduleGraph = options.server?.moduleGraph
-      if (moduleGraph && !moduleGraph.getModuleById(stylePreprocessModuleId)) {
-        await moduleGraph.ensureEntryFromUrl(stylePreprocessModuleId)
-      }
-      const transformResult: TransformResult = (await cssTransform(
-        content,
-        stylePreprocessModuleId
-      )) as TransformResult
-      // TODO vite:css transform currently returns an empty mapping that would kill svelte compiler.
-      const hasMap = !!transformResult.map?.mappings
-      return {
-        code: transformResult.code,
-        map: hasMap ? (transformResult.map as object) : null,
-        dependencies: transformResult.deps
-      }
+  // @ts-ignore
+  return async ({ attributes, content, filename }) => {
+    const lang = attributes.lang as string
+    if (!supportedLangs.includes(lang)) {
+      return { code: content }
     }
+    const moduleId = `${filename}.${lang}`
+    const moduleGraph = options.server?.moduleGraph
+    if (moduleGraph && !moduleGraph.getModuleById(moduleId)) {
+      await moduleGraph.ensureEntryFromUrl(moduleId)
+    }
+    const transformResult: TransformResult = (await pluginTransform(
+      content,
+      moduleId
+    )) as TransformResult
+    // TODO vite:css transform currently returns an empty mapping that would kill svelte compiler.
+    const hasMap = !!transformResult.map?.mappings
+    if (transformResult.map?.sources?.[0] === moduleId) {
+      transformResult.map.sources[0] = filename as string
+    }
+    return {
+      code: transformResult.code,
+      map: hasMap ? (transformResult.map as object) : null,
+      dependencies: transformResult.deps
+    }
+  }
+}
+
+export function createVitePreprocessorGroup(
+  config: ResolvedConfig,
+  options: ResolvedOptions
+): PreprocessorGroup {
+  return {
+    script: createPreprocessorFromVitePlugin(
+      config,
+      options,
+      'vite:esbuild',
+      supportedScriptLangs
+    ),
+    style: createPreprocessorFromVitePlugin(
+      config,
+      options,
+      'vite:css',
+      supportedStyleLangs
+    )
   } as PreprocessorGroup
 }
 
@@ -97,10 +130,7 @@ export function buildExtraPreprocessors(
 ) {
   const extraPreprocessors = []
   if (options.useVitePreprocess) {
-    const viteCssPlugin = config.plugins.find((p) => p.name === 'vite:css')
-    extraPreprocessors.push(
-      createViteStylePreprocessor(viteCssPlugin!, options)
-    )
+    extraPreprocessors.push(createVitePreprocessorGroup(config, options))
   }
   // TODO
   /*
