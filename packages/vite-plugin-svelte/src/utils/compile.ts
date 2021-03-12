@@ -3,7 +3,6 @@ import { compile, preprocess, walk } from 'svelte/compiler'
 // @ts-ignore
 import { createMakeHot } from 'svelte-hmr'
 import { SvelteRequest } from './id'
-import { safeBase64Hash } from './hash'
 import { log } from './log'
 
 const _createCompileSvelte = (makeHot: Function) =>
@@ -23,7 +22,7 @@ const _createCompileSvelte = (makeHot: Function) =>
       hydratable: true
     }
     if (options.hot) {
-      const hash = `s-${safeBase64Hash(cssId)}`
+      const hash = svelteRequest.cssHash
       log.debug(`setting cssHash ${hash} for ${cssId}`)
       finalCompilerOptions.cssHash = () => hash
     }

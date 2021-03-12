@@ -2,6 +2,7 @@
 import qs from 'querystring'
 import { createFilter } from '@rollup/pluginutils'
 import { Arrayable, ResolvedOptions } from './options'
+import { safeBase64Hash } from './hash'
 
 export type SvelteQueryTypes = 'style' | 'script'
 
@@ -16,6 +17,7 @@ export interface SvelteQuery {
 export interface SvelteRequest {
   id: string
   cssId: string
+  cssHash: string
   filename: string
   normalizedFilename: string
   query: SvelteQuery
@@ -45,6 +47,7 @@ function parseToSvelteRequest(
   return {
     id,
     cssId,
+    cssHash: `s-${safeBase64Hash(cssId)}`,
     filename,
     normalizedFilename,
     query,
