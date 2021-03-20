@@ -2,8 +2,7 @@ import * as path from 'path'
 import * as fs from 'fs'
 // @ts-ignore
 import { repository } from '../../package.json'
-// @ts-ignore
-import { version as vitePluginSvelteVersion } from '../../../vite-plugin-svelte/package.json'
+
 const templatesPath = 'packages/templates'
 const log = console
 
@@ -12,10 +11,6 @@ async function updatePkg(dir: string) {
     const pkgFile = path.join(dir, 'package.json')
     const pkg = require(pkgFile)
     pkg.name = path.basename(dir)
-    pkg.devDependencies[
-      '@svitejs/vite-plugin-svelte'
-    ] = `^${vitePluginSvelteVersion}`
-    fs.writeFileSync(pkgFile, JSON.stringify(pkg, null, 2))
   } catch (e) {
     log.error('failed to update package.json', e)
     throw e

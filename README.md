@@ -4,20 +4,21 @@ A fresh start for svite based on vite2 repo structure and setup
 
 ## Packages
 
-| Package                                                    | Version (click for changelogs)                                                                                                            |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [svite](packages/svite)                                    | [![vite version](https://img.shields.io/npm/v/svite.svg?label=%20)](packages/svite/CHANGELOG.md)                                          |
-| [@svitejs/vite-plugin-svelte](packages/vite-plugin-svelte) | [![plugin-vue version](https://img.shields.io/npm/v/@svitejs/vite-plugin-svelte.svg?label=%20)](packages/vite-plugin-svelte/CHANGELOG.md) |
+| Package                 | Version (click for changelogs)                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| [svite](packages/svite) | [![vite version](https://img.shields.io/npm/v/svite.svg?label=%20)](packages/svite/CHANGELOG.md) |
+
+### vite-plugin-svelte
+
+vite-plugin-svelte has moved: https://github.com/sveltejs/vite-plugin-svelte
+Please update your dependency to `"@sveltejs/vite-plugin-svelte: "^1.0.0-next.5`
 
 ## Development
 
 ### dev
 
 - run `pnpm i`to install
-- run `pnpm dev` in `packages/vite-plugin-svelte` to autobuild plugin
 - run `pnpm dev` in `packages/playground/xxx` to start vite
-
-changes in plugin need restart of dev server
 
 ### some notes
 

@@ -76,13 +76,13 @@ module.exports = {
         'node/no-extraneous-import': [
           'error',
           {
-            allowModules: ['@svitejs/vite-plugin-svelte', 'svite']
+            allowModules: ['@sveltejs/vite-plugin-svelte', 'svite']
           }
         ],
         'node/no-extraneous-require': [
           'error',
           {
-            allowModules: ['@svitejs/vite-plugin-svelte', 'svite']
+            allowModules: ['@sveltejs/vite-plugin-svelte', 'svite']
           }
         ]
       },

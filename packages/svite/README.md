@@ -40,7 +40,7 @@ Options:
 
 # Migration from 0.8
 
-- install `vite@2` and `@svitejs/vite-plugin-svelte`
+- install `vite@2` and `@sveltejs/vite-plugin-svelte`
 - Update or add `vite.config.js`
   - use the pattern described in the [readme](../vite-plugin-svelte/README.md) of the new vite-plugin-svelte
   - remove old svite options
