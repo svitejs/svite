@@ -11,7 +11,7 @@ A fresh start for svite based on vite2 repo structure and setup
 ### vite-plugin-svelte
 
 vite-plugin-svelte has moved: https://github.com/sveltejs/vite-plugin-svelte
-Please update your dependency to `"@sveltejs/vite-plugin-svelte: "^1.0.0-next.5`
+Please update your dependency to `@sveltejs/vite-plugin-svelte`
 
 ## Development
 
