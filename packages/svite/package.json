@@ -39,7 +39,7 @@
   "dependencies": {
     "cac": "^6.7.2",
     "chalk": "^4.1.0",
-    "degit": "^2.8.0",
+    "degit": "2.8.0",
     "execa": "^5.0.0"
   },
   "peerDependencies": {},

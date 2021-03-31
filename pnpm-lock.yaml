@@ -298,7 +298,7 @@ importers:
       '@types/node': ^14.14.35
       cac: ^6.7.2
       chalk: ^4.1.0
-      degit: ^2.8.0
+      degit: 2.8.0
       esbuild: ^0.9.5
       execa: ^5.0.0
   packages/templates:
