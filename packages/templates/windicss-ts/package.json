@@ -11,7 +11,7 @@
     "windicss": "^2.5.3"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.5",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.12",
     "@tsconfig/svelte": "^1.0.10",
     "svelte": "^3.35.0",
     "svelte-check": "^1.2.6",

@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.5",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.12",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.8",
     "postcss-import": "^14.0.0",
