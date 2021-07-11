@@ -8,7 +8,7 @@
     "validate": "svelte-check"
   },
   "dependencies": {
-    "windicss": "^2.5.3"
+    "windicss": "^3.1.4"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.12",
@@ -20,6 +20,6 @@
     "tslib": "^2.1.0",
     "typescript": "^4.2.3",
     "vite": "^2.1.2",
-    "vite-plugin-windicss": "^0.9.4"
+    "vite-plugin-windicss": "^1.2.4"
   }
 }
