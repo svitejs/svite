@@ -44,6 +44,6 @@
   },
   "devDependencies": {
     "@types/node": "^14.17.5",
-    "esbuild": "^0.9.7"
+    "esbuild": "^0.12.5"
   }
 }

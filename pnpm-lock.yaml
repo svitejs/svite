@@ -17,7 +17,7 @@ importers:
       conventional-changelog-cli: ^2.1.1
       cross-env: ^7.0.3
       enquirer: ^2.3.6
-      esbuild: ^0.9.7
+      esbuild: ^0.12.5
       eslint: ^7.31.0
       eslint-config-prettier: ^8.3.0
       eslint-plugin-html: ^6.1.2
@@ -66,7 +66,7 @@ importers:
       conventional-changelog-cli: 2.1.1
       cross-env: 7.0.3
       enquirer: 2.3.6
-      esbuild: 0.9.7
+      esbuild: 0.12.15
       eslint: 7.31.0
       eslint-config-prettier: 8.3.0_eslint@7.31.0
       eslint-plugin-html: 6.1.2
@@ -308,7 +308,7 @@ importers:
       cac: ^6.7.3
       chalk: ^4.1.1
       degit: 2.8.0
-      esbuild: ^0.9.7
+      esbuild: ^0.12.5
       execa: ^5.1.1
     dependencies:
       cac: 6.7.3
@@ -317,7 +317,7 @@ importers:
       execa: 5.1.1
     devDependencies:
       '@types/node': 14.17.5
-      esbuild: 0.9.7
+      esbuild: 0.12.15
 
   packages/templates:
     specifiers: {}
@@ -3445,12 +3445,6 @@ packages:
 
   /esbuild/0.12.15:
     resolution: {integrity: sha512-72V4JNd2+48eOVCXx49xoSWHgC3/cCy96e7mbXKY+WOWghN00cCmlGnwVLRhRHorvv0dgCyuMYBZlM2xDM5OQw==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-
-  /esbuild/0.9.7:
-    resolution: {integrity: sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==}
     hasBin: true
     requiresBuild: true
     dev: true
