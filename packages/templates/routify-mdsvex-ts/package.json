@@ -1,6 +1,7 @@
 {
   "name": "svite-template-routify-mdsvex-ts",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "run-p dev:routify dev:vite",
     "dev:routify": "routify run",

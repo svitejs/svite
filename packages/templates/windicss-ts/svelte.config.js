@@ -1,5 +1,5 @@
-const { typescript } = require('svelte-preprocess')
+import { typescript } from 'svelte-preprocess'
 
-module.exports = {
+export default {
   preprocess: [typescript()]
 }
