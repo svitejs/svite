@@ -1,8 +1,8 @@
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
-import { mdsvex } from 'mdsvex'
+const { join, dirname } = require('path')
+const { fileURLToPath } = require('url')
+const { mdsvex } = require('mdsvex')
 
-export default {
+module.exports = {
   extensions: ['.svelte', '.svx'],
   preprocess: [
     mdsvex({

@@ -1,4 +1,4 @@
-import { postcss } from 'svelte-preprocess'
-export default {
+const { postcss } = require('svelte-preprocess')
+module.exports = {
   preprocess: [postcss()]
 }

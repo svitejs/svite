@@ -1,14 +1,14 @@
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { defineConfig } from 'vite'
-import vitePluginWindicss from 'vite-plugin-windicss'
+const { svelte } = require('@sveltejs/vite-plugin-svelte')
+const { defineConfig } = require('vite')
+const vitePluginWindicss = require('vite-plugin-windicss').default
 
-export default defineConfig(({ command, mode }) => {
+module.exports = defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production'
   return {
     plugins: [
       // uses enforce: pre
       svelte(),
-      vitePluginWindicss.default({
+      vitePluginWindicss({
         transformCSS: 'pre'
       })
     ],
