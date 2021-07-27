@@ -11,9 +11,8 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.14",
     "pug": "^3.0.2",
     "stylus": "^0.54.8",
-    "svelte": "^3.40.2",
-    "svelte-hmr": "^0.13.5",
+    "svelte": "^3.41.0",
     "svelte-preprocess": "^4.7.4",
-    "vite": "^2.4.3"
+    "vite": "^2.4.4"
   }
 }
