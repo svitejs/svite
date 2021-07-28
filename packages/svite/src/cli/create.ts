@@ -41,7 +41,8 @@ export const templates = [
   'minimal',
   'routify-mdsvex',
   'windicss',
-  'preprocess-auto'
+  'preprocess-auto',
+  'tauri-routify'
 ]
 
 export async function create(options: CreateOptions) {
