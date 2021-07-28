@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/svitejs/svite/compare/svite@0.9.0...svite@0.10.0) (2021-07-28)
+
+
+### Features
+
+* add tauri-routify template ([#18](https://github.com/svitejs/svite/issues/18)) ([0ffb73e](https://github.com/svitejs/svite/commit/0ffb73e10eaaa8542b9d43707b99f98d08dc4330))
+
+
+
 # [0.9.0](https://github.com/svitejs/svite/compare/svite@0.9.0-6...svite@0.9.0) (2021-07-28)
 
 
