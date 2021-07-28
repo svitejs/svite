@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/svitejs/svite/compare/svite@0.9.0-6...svite@0.9.0) (2021-07-28)
+
+
+### Bug Fixes
+
+* update dependencies and config files to latest format ([#17](https://github.com/svitejs/svite/issues/17)) ([ef574bf](https://github.com/svitejs/svite/commit/ef574bfb70b87ddfeb9a5a2c1c5d94dbd830be40))
+
+
+
 # [0.9.0-6](https://github.com/svitejs/svite/compare/svite@0.9.0-5...svite@0.9.0-6) (2021-03-31)
 
 
