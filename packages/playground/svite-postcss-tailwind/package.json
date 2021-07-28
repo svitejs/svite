@@ -6,18 +6,17 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.5",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.8",
-    "postcss-import": "^14.0.0",
-    "postcss-load-config": "^3.0.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.14",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "postcss-load-config": "^3.1.0",
     "postcss-preset-env": "^6.7.0",
-    "svelte": "^3.35.0",
-    "svelte-hmr": "^0.13.0",
-    "svelte-preprocess": "^4.6.9",
-    "vite": "^2.1.2",
-    "tailwindcss": "^2.0.4"
+    "svelte": "^3.41.0",
+    "svelte-hmr": "^0.14.7",
+    "svelte-preprocess": "^4.7.4",
+    "tailwindcss": "^2.2.7",
+    "vite": "^2.4.4"
   }
 }

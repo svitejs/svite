@@ -1,11 +1,17 @@
-const path = require('path')
-const { mdsvex } = require('mdsvex')
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { mdsvex } from 'mdsvex'
 
-module.exports = {
+export default {
   extensions: ['.svelte', '.svx'],
   preprocess: [
     mdsvex({
-      layout: path.join(__dirname, 'src', 'layouts', 'MdsvexLayout.svelte')
+      layout: join(
+        dirname(fileURLToPath(import.meta.url)),
+        'src',
+        'layouts',
+        'MdsvexLayout.svelte'
+      )
     })
   ]
 }

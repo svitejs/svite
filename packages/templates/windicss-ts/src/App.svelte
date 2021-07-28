@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Foo from './Foo.svelte'
   const world = 'world' // edit world and save to see hmr update
 </script>
