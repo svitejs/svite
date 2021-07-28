@@ -3,17 +3,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "run-p dev:routify dev:vite dev:tauri",
+    "dev": "run-p dev:routify dev:vite",
     "dev:routify": "routify run",
     "dev:vite": "vite",
     "dev:tauri": "tauri dev",
-    "build": "run-s build:routify build:vite build:tauri",
+    "build": "run-s build:routify build:vite",
     "build:routify": "routify run -b",
     "build:vite": "vite build",
     "build:tauri": "tauri build",
     "serve": "vite preview",
     "validate": "svelte-check",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "tauri-dev": "run-p dev:routify dev:vite dev:tauri",
+    "tauri-build": "run-s build:routify build:vite build:tauri"
   },
   "dependencies": {
     "@roxi/routify": "^2.18.2",
