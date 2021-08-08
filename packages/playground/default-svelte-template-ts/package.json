@@ -8,10 +8,10 @@
     "validate": "svelte-check"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.14",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
     "@tsconfig/svelte": "^2.0.1",
-    "svelte": "^3.41.0",
-    "svelte-check": "^2.2.3",
+    "svelte": "^3.42.1",
+    "svelte-check": "^2.2.4",
     "svelte-hmr": "^0.14.7",
     "svelte-preprocess": "^4.7.4",
     "tslib": "^2.3.0",
