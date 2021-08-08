@@ -248,7 +248,7 @@ importers:
 
   packages/playground/svite-routify-mdsvex:
     specifiers:
-      '@roxi/routify': ^2.18.2
+      '@roxi/routify': ^2.18.3
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.14
       mdsvex: ^0.9.8
       npm-run-all: ^4.1.5
@@ -256,7 +256,7 @@ importers:
       svelte-hmr: ^0.14.7
       vite: ^2.4.4
     dependencies:
-      '@roxi/routify': 2.18.2
+      '@roxi/routify': 2.18.3
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.14_svelte@3.41.0+vite@2.4.4
       mdsvex: 0.9.8_svelte@3.41.0
@@ -394,14 +394,14 @@ importers:
 
   packages/templates/routify-mdsvex:
     specifiers:
-      '@roxi/routify': ^2.18.2
+      '@roxi/routify': ^2.18.3
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.14
       mdsvex: ^0.9.8
       npm-run-all: ^4.1.5
       svelte: ^3.41.0
       vite: ^2.4.4
     dependencies:
-      '@roxi/routify': 2.18.2
+      '@roxi/routify': 2.18.3
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.14_svelte@3.41.0+vite@2.4.4
       mdsvex: 0.9.8_svelte@3.41.0
@@ -411,7 +411,7 @@ importers:
 
   packages/templates/routify-mdsvex-ts:
     specifiers:
-      '@roxi/routify': ^2.18.2
+      '@roxi/routify': ^2.18.3
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.14
       '@tsconfig/svelte': ^2.0.1
       mdsvex: ^0.9.8
@@ -423,7 +423,7 @@ importers:
       typescript: ^4.3.5
       vite: ^2.4.4
     dependencies:
-      '@roxi/routify': 2.18.2
+      '@roxi/routify': 2.18.3
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.14_svelte@3.41.0+vite@2.4.4
       '@tsconfig/svelte': 2.0.1
@@ -438,7 +438,7 @@ importers:
 
   packages/templates/tauri-routify:
     specifiers:
-      '@roxi/routify': ^2.18.2
+      '@roxi/routify': ^2.18.3
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.14
       '@tauri-apps/api': ^1.0.0-beta.5
       '@tauri-apps/cli': ^1.0.0-beta.6
@@ -451,7 +451,7 @@ importers:
       typescript: ^4.3.5
       vite: ^2.4.4
     dependencies:
-      '@roxi/routify': 2.18.2
+      '@roxi/routify': 2.18.3
       '@tauri-apps/api': 1.0.0-beta.5
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.14_svelte@3.41.0+vite@2.4.4
@@ -467,7 +467,7 @@ importers:
 
   packages/templates/tauri-routify-ts:
     specifiers:
-      '@roxi/routify': ^2.18.2
+      '@roxi/routify': ^2.18.3
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.14
       '@tauri-apps/api': ^1.0.0-beta.5
       '@tauri-apps/cli': ^1.0.0-beta.6
@@ -480,7 +480,7 @@ importers:
       typescript: ^4.3.5
       vite: ^2.4.4
     dependencies:
-      '@roxi/routify': 2.18.2
+      '@roxi/routify': 2.18.3
       '@tauri-apps/api': 1.0.0-beta.5
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.14_svelte@3.41.0+vite@2.4.4
@@ -1410,8 +1410,8 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /@roxi/routify/2.18.2:
-    resolution: {integrity: sha512-U9a/cdGW+W9LcafPzlhfdzNa3dFs1YC56KvSFS/MaxoeZ1qNsadRDxU6gUoLSew+WuNdpAu9hweywlzQe53wNA==}
+  /@roxi/routify/2.18.3:
+    resolution: {integrity: sha512-QulFpvsQX8jv9n3bXk9JoRDp3YcZ0vYtheT3tiI0Pg8XW+adaZWlRo6g0JwGQsUu6GGC9pzdRLiGwiAmLwRyhw==}
     hasBin: true
     dependencies:
       '@roxi/ssr': 0.2.1
