@@ -1,3 +1,7 @@
+## [0.10.1](https://github.com/svitejs/svite/compare/svite@0.10.0...svite@0.10.1) (2021-08-08)
+
+
+
 # [0.10.0](https://github.com/svitejs/svite/compare/svite@0.9.0...svite@0.10.0) (2021-07-28)
 
 
