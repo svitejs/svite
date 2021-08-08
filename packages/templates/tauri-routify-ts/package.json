@@ -18,7 +18,7 @@
     "tauri-build": "run-s build:routify build:vite build:tauri"
   },
   "dependencies": {
-    "@roxi/routify": "^2.18.2",
+    "@roxi/routify": "^2.18.3",
     "@tauri-apps/api": "^1.0.0-beta.5"
   },
   "devDependencies": {
