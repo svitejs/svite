@@ -7,16 +7,16 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
-    "autoprefixer": "^10.3.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
+    "autoprefixer": "^10.3.3",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
     "postcss-load-config": "^3.1.0",
     "postcss-preset-env": "^6.7.0",
-    "svelte": "^3.42.1",
+    "svelte": "^3.42.4",
     "svelte-hmr": "^0.14.7",
-    "svelte-preprocess": "^4.7.4",
-    "tailwindcss": "^2.2.7",
-    "vite": "^2.4.4"
+    "svelte-preprocess": "^4.8.0",
+    "tailwindcss": "^2.2.9",
+    "vite": "^2.5.3"
   }
 }

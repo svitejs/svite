@@ -4,10 +4,11 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production'
   return {
-    optimizeDeps: {
-      exclude: ['@roxi/routify']
-    },
-    plugins: [svelte()],
+    plugins: [
+      svelte({
+        disableDependencyReinclusion: ['@roxi/routify']
+      })
+    ],
     build: {
       minify: isProduction
     }

@@ -8,14 +8,14 @@
     "validate": "svelte-check"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
     "@tsconfig/svelte": "^2.0.1",
-    "svelte": "^3.42.1",
-    "svelte-check": "^2.2.4",
+    "svelte": "^3.42.4",
+    "svelte-check": "^2.2.5",
     "svelte-hmr": "^0.14.7",
-    "svelte-preprocess": "^4.7.4",
-    "tslib": "^2.3.0",
-    "typescript": "^4.3.5",
-    "vite": "^2.4.4"
+    "svelte-preprocess": "^4.8.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2",
+    "vite": "^2.5.3"
   }
 }

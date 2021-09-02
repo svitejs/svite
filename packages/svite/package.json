@@ -43,7 +43,7 @@
     "execa": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "^16.4.13",
-    "esbuild": "^0.12.19"
+    "@types/node": "^16.7.10",
+    "esbuild": "^0.12.24"
   }
 }
