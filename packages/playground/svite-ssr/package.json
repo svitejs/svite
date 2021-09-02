@@ -11,13 +11,13 @@
     "debug": "node --inspect-brk server"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "serve-static": "^1.14.1",
-    "svelte": "^3.42.1",
+    "svelte": "^3.42.4",
     "svelte-hmr": "^0.14.7",
-    "vite": "^2.4.4"
+    "vite": "^2.5.3"
   }
 }

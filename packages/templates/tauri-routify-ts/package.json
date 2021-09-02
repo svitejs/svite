@@ -19,18 +19,18 @@
   },
   "dependencies": {
     "@roxi/routify": "^2.18.3",
-    "@tauri-apps/api": "^1.0.0-beta.5"
+    "@tauri-apps/api": "^1.0.0-beta.8"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
-    "@tauri-apps/cli": "^1.0.0-beta.6",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
+    "@tauri-apps/cli": "^1.0.0-beta.10",
     "@tsconfig/svelte": "^2.0.1",
     "npm-run-all": "^4.1.5",
-    "svelte": "^3.42.1",
-    "svelte-check": "^2.2.4",
-    "svelte-preprocess": "^4.7.4",
-    "tslib": "^2.3.0",
-    "typescript": "^4.3.5",
-    "vite": "^2.4.4"
+    "svelte": "^3.42.4",
+    "svelte-check": "^2.2.5",
+    "svelte-preprocess": "^4.8.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2",
+    "vite": "^2.5.3"
   }
 }
