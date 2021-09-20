@@ -1,7 +1,8 @@
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { mdsvex } from 'mdsvex'
-import { typescript } from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess'
+const { typescript } = sveltePreprocess
 
 export default {
   extensions: ['.svelte', '.svx'],
