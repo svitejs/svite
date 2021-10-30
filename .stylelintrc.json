@@ -15,5 +15,15 @@
     "**/*preprocess-auto*/**/*.svelte",
     "**/windicss*/**/*.svelte",
     "**/preprocess-with-vite/**/*.svelte"
+  ],
+  "overrides": [
+    {
+      "files": "**/*.svelte",
+      "customSyntax": "postcss-html"
+    },
+    {
+      "files": "**/*.html",
+      "customSyntax": "postcss-html"
+    }
   ]
 }

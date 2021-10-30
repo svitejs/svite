@@ -37,13 +37,13 @@
   },
   "homepage": "https://github.com/svitejs/svite/tree/main/packages/svite#readme",
   "dependencies": {
-    "cac": "^6.7.3",
+    "cac": "^6.7.11",
     "chalk": "^4.1.2",
     "degit": "2.8.4",
     "execa": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "^16.9.4",
-    "esbuild": "^0.12.28"
+    "@types/node": "^16.11.6",
+    "esbuild": "^0.13.11"
   }
 }
