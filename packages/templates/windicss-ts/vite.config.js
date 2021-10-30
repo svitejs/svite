@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       // uses enforce: pre
       svelte(),
-      vitePluginWindicss.default({
+      vitePluginWindicss({
         transformCSS: 'pre'
       })
     ],
