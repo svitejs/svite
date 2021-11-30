@@ -8,10 +8,10 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "sass": "^1.43.4",
+    "sass": "^1.44.0",
     "stylus": "^0.55.0",
-    "svelte": "^3.44.0",
+    "svelte": "^3.44.2",
     "svelte-hmr": "^0.14.7",
-    "vite": "^2.6.13"
+    "vite": "^2.6.14"
   }
 }

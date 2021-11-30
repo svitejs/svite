@@ -21,7 +21,7 @@
     "release": "node ../../scripts/release.js"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=v12.22.7"
   },
   "repository": {
     "type": "git",
@@ -37,13 +37,13 @@
   },
   "homepage": "https://github.com/svitejs/svite/tree/main/packages/svite#readme",
   "dependencies": {
-    "cac": "^6.7.11",
+    "cac": "^6.7.12",
     "chalk": "^4.1.2",
     "degit": "2.8.4",
     "execa": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "^16.11.6",
-    "esbuild": "^0.13.11"
+    "@types/node": "^16.11.11",
+    "esbuild": "^0.14.1"
   }
 }

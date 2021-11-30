@@ -7,13 +7,13 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "windicss": "^3.2.0"
+    "windicss": "^3.2.1"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "svelte": "^3.44.0",
+    "svelte": "^3.44.2",
     "svelte-hmr": "^0.14.7",
-    "vite": "^2.6.13",
-    "vite-plugin-windicss": "^1.4.12"
+    "vite": "^2.6.14",
+    "vite-plugin-windicss": "^1.5.3"
   }
 }
