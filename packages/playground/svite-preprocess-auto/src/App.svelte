@@ -4,7 +4,7 @@
 </script>
 
 <!-- prettier-ignore -->
-<template type="text/pug">
+<template lang="pug">
   h1.note This is the svelte-preproces example - built with svite
   hr
   h1 Hello!
