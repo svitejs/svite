@@ -12,5 +12,8 @@
   ],
   "ignoreDeps": [
     // add deps that need manual attention here
+    //esm-only
+    "chalk",
+    "execa"
   ]
 }
