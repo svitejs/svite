@@ -1,11 +1,12 @@
 # [0.11.0](https://github.com/svitejs/svite/compare/svite@0.10.1...svite@0.11.0) (2021-11-30)
 
-
 ### Bug Fixes
 
 * update dependencies and adapt typescript-templates to preprocess changes ([#21](https://github.com/svitejs/svite/issues/21)) ([7bfccb3](https://github.com/svitejs/svite/commit/7bfccb38723a705ec2b8e8ab5f09398047bdfbca))
 
+### Note
 
+* technical release, uses tsup for bundling instead of raw esbuild
 
 ## [0.10.1](https://github.com/svitejs/svite/compare/svite@0.10.0...svite@0.10.1) (2021-08-08)
 
