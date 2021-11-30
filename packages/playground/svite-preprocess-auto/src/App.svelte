@@ -7,7 +7,7 @@
 <templatelang="pug">
   h1.note This is the svelte-preproces example - built with svite
   hr
-  h1 Hello!
+  h1 Hello qoel!
   br
   input(bind:value="{name}")
   br
