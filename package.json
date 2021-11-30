@@ -15,11 +15,11 @@
     "build": "pnpm -r build --filter=\\!./packages/playground",
     "build:svite": "pnpm --dir packages/svite build",
     "lint:script": "eslint --ignore-path .gitignore '**/*.{js,ts,svelte,html,svx,md}'",
-    "lint:style": "stylelint --ignore-path .gitignore '**/*.{css,scss,svelte,html}'",
+    "lint:style": "stylelint --ignore-path .gitignore '**/*.{css,scss,html}'",
     "lint:fix": "run-s lint:fix:script lint:fix:style",
     "lint:fix:script": "pnpm lint:script -- --fix",
     "lint:fix:style": "pnpm lint:style -- --fix",
-    "format": "prettier --ignore-path .gitignore '**/*.{css,scss,svelte,html,js,ts,svx,md}' --check",
+    "format": "prettier --check --ignore-path .prettierignore '**/*.{css,scss,svelte,html,js,ts,svx,md}'",
     "format:fix": "pnpm format -- --write",
     "fixup": "run-s lint:fix format:fix",
     "prepare": "husky install"
@@ -75,8 +75,8 @@
   },
   "lint-staged": {
     "*.{js,ts,svelte,html,md,svx}": "eslint --fix",
-    "*.{css,scss,svelte,html}": "stylelint --fix",
-    "*.{css,scss,svelte,html,js,ts,svx,md}": "prettier --write"
+    "*.{css,scss,html}": "stylelint --fix",
+    "*.{css,scss,svelte,html,js,ts,svx,md}": "prettier --write --ignore-path .prettierignore"
   },
   "engines": {
     "pnpm": ">=6",

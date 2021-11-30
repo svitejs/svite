@@ -20,16 +20,6 @@ module.exports = {
       options: {
         requirePragma: true
       }
-    },
-    {
-      files: [
-        '**/templates/preprocess-auto/src/*.svelte',
-        '**/templates/preprocess-auto-ts/src/*.svelte',
-        '**/playground/svite-preprocess-auto/src/*.svelte'
-      ],
-      options: {
-        requirePragma: true
-      }
     }
   ]
 }
