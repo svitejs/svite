@@ -1,12 +1,9 @@
 lockfileVersion: 5.3
 
 overrides:
-  //tar@6: see https://npmjs.com/advisories/1770 and https://npmjs.com/advisories/1771
-  tar@6: ^6.1.2
-  //trim-newlines: see https://npmjs.com/advisories/1753
-  trim-newlines@<=3: ^3.0.1
-  semver-regex@<3.1.3: '>=3.1.3'
   validator@<13.7.0: '>=13.7.0'
+  semver-regex@<3.1.3: '>=3.1.3'
+  trim-newlines@<3.0.1: '>=3.0.1'
 
 importers:
 
