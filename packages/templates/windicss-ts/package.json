@@ -9,17 +9,17 @@
     "validate": "svelte-check"
   },
   "dependencies": {
-    "windicss": "^3.2.1"
+    "windicss": "^3.4.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.32",
     "@tsconfig/svelte": "^2.0.1",
-    "svelte": "^3.44.2",
-    "svelte-check": "^2.2.10",
-    "svelte-preprocess": "^4.9.8",
+    "svelte": "^3.44.3",
+    "svelte-check": "^2.2.11",
+    "svelte-preprocess": "^4.10.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.2",
-    "vite": "^2.6.14",
-    "vite-plugin-windicss": "^1.5.4"
+    "typescript": "^4.5.4",
+    "vite": "^2.7.6",
+    "vite-plugin-windicss": "^1.6.1"
   }
 }
