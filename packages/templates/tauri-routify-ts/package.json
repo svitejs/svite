@@ -22,7 +22,7 @@
     "@tauri-apps/api": "^1.0.0-beta.8"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.32",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.33",
     "@tauri-apps/cli": "^1.0.0-beta.10",
     "@tsconfig/svelte": "^2.0.1",
     "npm-run-all": "^4.1.5",
@@ -31,6 +31,6 @@
     "svelte-preprocess": "^4.10.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
-    "vite": "^2.7.7"
+    "vite": "^2.7.10"
   }
 }
