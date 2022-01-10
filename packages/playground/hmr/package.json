@@ -9,9 +9,9 @@
     "@svitejs/hmr-test-dependency": "workspace:*"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.33",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.34",
     "node-fetch": "^3.1.0",
-    "svelte": "^3.44.3",
+    "svelte": "^3.45.0",
     "svelte-hmr": "^0.14.9",
     "vite": "^2.7.10"
   }
