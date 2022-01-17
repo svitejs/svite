@@ -10,9 +10,9 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.34",
-    "node-fetch": "^3.1.0",
-    "svelte": "^3.45.0",
+    "node-fetch": "^3.1.1",
+    "svelte": "^3.46.2",
     "svelte-hmr": "^0.14.9",
-    "vite": "^2.7.10"
+    "vite": "^2.7.12"
   }
 }
