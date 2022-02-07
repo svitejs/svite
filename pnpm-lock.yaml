@@ -109,29 +109,29 @@ importers:
 
   packages/templates/minimal:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       svelte: ^3.46.4
       vite: ^2.7.13
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       svelte: 3.46.4
       vite: 2.7.13
 
   packages/templates/minimal-ts:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tsconfig/svelte': ^3.0.0
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
       vite: ^2.7.13
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tsconfig/svelte': 3.0.0
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -139,14 +139,14 @@ importers:
 
   packages/templates/preprocess-auto:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       pug: ^3.0.2
       stylus: ^0.56.0
       svelte: ^3.46.4
       svelte-preprocess: ^4.10.2
       vite: ^2.7.13
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       pug: 3.0.2
       stylus: 0.56.0
       svelte: 3.46.4
@@ -155,23 +155,23 @@ importers:
 
   packages/templates/preprocess-auto-ts:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tsconfig/svelte': ^3.0.0
       pug: ^3.0.2
       stylus: ^0.56.0
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
       vite: ^2.7.13
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tsconfig/svelte': 3.0.0
       pug: 3.0.2
       stylus: 0.56.0
       svelte: 3.46.4
-      svelte-check: 2.4.2_e7ae80dafa24fb6ce08e80b16d919ed7
+      svelte-check: 2.4.3_e7ae80dafa24fb6ce08e80b16d919ed7
       svelte-preprocess: 4.10.2_48b3fc1cf625a07d6eba5568e2f28086
       tslib: 2.3.1
       typescript: 4.5.5
@@ -180,7 +180,7 @@ importers:
   packages/templates/routify-mdsvex:
     specifiers:
       '@roxi/routify': ^2.18.4
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       mdsvex: ^0.10.5
       npm-run-all: ^4.1.5
       svelte: ^3.46.4
@@ -188,7 +188,7 @@ importers:
     dependencies:
       '@roxi/routify': 2.18.4
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       mdsvex: 0.10.5_svelte@3.46.4
       npm-run-all: 4.1.5
       svelte: 3.46.4
@@ -197,12 +197,12 @@ importers:
   packages/templates/routify-mdsvex-ts:
     specifiers:
       '@roxi/routify': ^2.18.4
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tsconfig/svelte': ^3.0.0
       mdsvex: ^0.10.5
       npm-run-all: ^4.1.5
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
@@ -210,12 +210,12 @@ importers:
     dependencies:
       '@roxi/routify': 2.18.4
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tsconfig/svelte': 3.0.0
       mdsvex: 0.10.5_svelte@3.46.4
       npm-run-all: 4.1.5
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -224,13 +224,13 @@ importers:
   packages/templates/tauri-routify:
     specifiers:
       '@roxi/routify': ^2.18.4
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tauri-apps/api': ^1.0.0-beta.8
       '@tauri-apps/cli': ^1.0.0-beta.10
       '@tsconfig/svelte': ^3.0.0
       npm-run-all: ^4.1.5
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
@@ -239,12 +239,12 @@ importers:
       '@roxi/routify': 2.18.4
       '@tauri-apps/api': 1.0.0-beta.8
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tauri-apps/cli': 1.0.0-beta.10
       '@tsconfig/svelte': 3.0.0
       npm-run-all: 4.1.5
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -253,13 +253,13 @@ importers:
   packages/templates/tauri-routify-ts:
     specifiers:
       '@roxi/routify': ^2.18.4
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tauri-apps/api': ^1.0.0-beta.8
       '@tauri-apps/cli': ^1.0.0-beta.10
       '@tsconfig/svelte': ^3.0.0
       npm-run-all: ^4.1.5
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
@@ -268,12 +268,12 @@ importers:
       '@roxi/routify': 2.18.4
       '@tauri-apps/api': 1.0.0-beta.8
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tauri-apps/cli': 1.0.0-beta.10
       '@tsconfig/svelte': 3.0.0
       npm-run-all: 4.1.5
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -281,7 +281,7 @@ importers:
 
   packages/templates/windicss:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       svelte: ^3.46.4
       vite: ^2.7.13
       vite-plugin-windicss: ^1.6.3
@@ -289,17 +289,17 @@ importers:
     dependencies:
       windicss: 3.4.3
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       svelte: 3.46.4
       vite: 2.7.13
       vite-plugin-windicss: 1.6.3_vite@2.7.13
 
   packages/templates/windicss-ts:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.36
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.37
       '@tsconfig/svelte': ^3.0.0
       svelte: ^3.46.4
-      svelte-check: ^2.4.2
+      svelte-check: ^2.4.3
       svelte-preprocess: ^4.10.2
       tslib: ^2.3.1
       typescript: ^4.5.5
@@ -309,10 +309,10 @@ importers:
     dependencies:
       windicss: 3.4.3
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.36_svelte@3.46.4+vite@2.7.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.7.13
       '@tsconfig/svelte': 3.0.0
       svelte: 3.46.4
-      svelte-check: 2.4.2_svelte@3.46.4
+      svelte-check: 2.4.3_svelte@3.46.4
       svelte-preprocess: 4.10.2_svelte@3.46.4+typescript@4.5.5
       tslib: 2.3.1
       typescript: 4.5.5
@@ -722,8 +722,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.36_svelte@3.46.4+vite@2.7.13:
-    resolution: {integrity: sha512-X7lTiioTGC3ri5M299fxc2dimuKU7f22zTXcmD+NrF+fO9/b7YNfLeQQwWV7Tvv9REysMlR4G2HQF6+lY62p/Q==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.37_svelte@3.46.4+vite@2.7.13:
+    resolution: {integrity: sha512-EdSXw2rXeOahNrQfMJVZxa/NxZxW1a0TiBI3s+pVxnxU14hEQtnkLtdbTFhnceu22gJpNPFSIJRcIwRBBDQIeA==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -6810,8 +6810,8 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /svelte-check/2.4.2_e7ae80dafa24fb6ce08e80b16d919ed7:
-    resolution: {integrity: sha512-QUS3YXEfJf9RdNOPdztzxUxB2XCSNG+0AtkRuZwe/OvOXMv9WKqrmGOny0PW1DtflyWiGIVgYoUIqS/zlBMJFQ==}
+  /svelte-check/2.4.3_e7ae80dafa24fb6ce08e80b16d919ed7:
+    resolution: {integrity: sha512-0zJMMgqYHoP7QEG3tfc5DekpHAOqoy4QOL8scWMSdHIpVVDVC0MuYK57nFyj3XVTW8Zfm85FlgnAdQYsVmST2Q==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
@@ -6839,8 +6839,8 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-check/2.4.2_svelte@3.46.4:
-    resolution: {integrity: sha512-QUS3YXEfJf9RdNOPdztzxUxB2XCSNG+0AtkRuZwe/OvOXMv9WKqrmGOny0PW1DtflyWiGIVgYoUIqS/zlBMJFQ==}
+  /svelte-check/2.4.3_svelte@3.46.4:
+    resolution: {integrity: sha512-0zJMMgqYHoP7QEG3tfc5DekpHAOqoy4QOL8scWMSdHIpVVDVC0MuYK57nFyj3XVTW8Zfm85FlgnAdQYsVmST2Q==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
