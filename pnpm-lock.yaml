@@ -44,7 +44,7 @@ importers:
       slash: ^4.0.0
       stylelint: ^14.5.0
       stylelint-config-prettier: ^9.0.3
-      stylelint-config-recommended: ^6.0.0
+      stylelint-config-recommended: ^7.0.0
       svelte: ^3.46.4
       typescript: ^4.5.5
       vite: ^2.8.1
@@ -84,7 +84,7 @@ importers:
       slash: 4.0.0
       stylelint: 14.5.0
       stylelint-config-prettier: 9.0.3_stylelint@14.5.0
-      stylelint-config-recommended: 6.0.0_stylelint@14.5.0
+      stylelint-config-recommended: 7.0.0_stylelint@14.5.0
       svelte: 3.46.4
       typescript: 4.5.5
       vite: 2.8.1
@@ -4904,10 +4904,10 @@ packages:
       stylelint: 14.5.0
     dev: true
 
-  /stylelint-config-recommended/6.0.0_stylelint@14.5.0:
-    resolution: {integrity: sha512-ZorSSdyMcxWpROYUvLEMm0vSZud2uB7tX1hzBZwvVY9SV/uly4AvvJPPhCcymZL3fcQhEQG5AELmrxWqtmzacw==}
+  /stylelint-config-recommended/7.0.0_stylelint@14.5.0:
+    resolution: {integrity: sha512-yGn84Bf/q41J4luis1AZ95gj0EQwRX8lWmGmBwkwBNSkpGSpl66XcPTulxGa/Z91aPoNGuIGBmFkcM1MejMo9Q==}
     peerDependencies:
-      stylelint: ^14.0.0
+      stylelint: ^14.4.0
     dependencies:
       stylelint: 14.5.0
     dev: true
