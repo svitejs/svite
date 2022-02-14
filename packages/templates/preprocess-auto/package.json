@@ -12,7 +12,7 @@
     "pug": "^3.0.2",
     "stylus": "^0.56.0",
     "svelte": "^3.46.4",
-    "svelte-preprocess": "^4.10.2",
-    "vite": "^2.7.13"
+    "svelte-preprocess": "^4.10.3",
+    "vite": "^2.8.1"
   }
 }
