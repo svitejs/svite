@@ -8,12 +8,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "windicss": "^3.5.0"
+    "windicss": "^3.5.1"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.38",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.39",
     "svelte": "^3.46.4",
-    "vite": "^2.8.4",
-    "vite-plugin-windicss": "^1.8.1"
+    "vite": "^2.8.6",
+    "vite-plugin-windicss": "^1.8.3"
   }
 }
