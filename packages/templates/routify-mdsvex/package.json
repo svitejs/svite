@@ -18,7 +18,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
     "mdsvex": "^0.10.5",
     "npm-run-all": "^4.1.5",
-    "svelte": "^3.46.4",
-    "vite": "^2.8.6"
+    "svelte": "^3.46.6",
+    "vite": "^2.9.1"
   }
 }
