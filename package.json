@@ -62,8 +62,9 @@
     "*.{css,scss,html}": "stylelint --fix",
     "*.{css,scss,svelte,html,js,ts,svx,md}": "prettier --write --ignore-path .prettierignore"
   },
+  "packageManager": "pnpm@6.32.11",
   "engines": {
-    "pnpm": ">=6",
+    "pnpm": "^6.32.11",
     "yarn": "forbidden, use pnpm",
     "npm": "forbidden, use pnpm"
   },
