@@ -38,7 +38,7 @@
     "degit": "2.8.4"
   },
   "devDependencies": {
-    "@types/node": "^16.11.31",
-    "tsup": "^5.12.6"
+    "@types/node": "^16.11.33",
+    "tsup": "^5.12.7"
   }
 }
