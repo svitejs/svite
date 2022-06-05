@@ -18,19 +18,19 @@
     "tauri-build": "run-s build:routify build:vite build:tauri"
   },
   "dependencies": {
-    "@roxi/routify": "^2.18.6",
-    "@tauri-apps/api": "^1.0.0-rc.5"
+    "@roxi/routify": "^2.18.7",
+    "@tauri-apps/api": "^1.0.0-rc.6"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.44",
-    "@tauri-apps/cli": "^1.0.0-rc.11",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.47",
+    "@tauri-apps/cli": "^1.0.0-rc.13",
     "@tsconfig/svelte": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "svelte": "^3.48.0",
-    "svelte-check": "^2.7.1",
-    "svelte-preprocess": "^4.10.6",
+    "svelte-check": "^2.7.2",
+    "svelte-preprocess": "^4.10.7",
     "tslib": "^2.4.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.3",
     "vite": "^2.9.9"
   }
 }
