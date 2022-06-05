@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "dev": "pnpm run build:ci -- --watch src",
-    "build:ci": "rimraf dist && tsup-node src/index.ts src/cli/svite.ts --format cjs --no-splitting",
+    "build:ci": "rimraf dist && tsup-node src/index.ts src/cli/svite.ts --format cjs --no-splitting --shims",
     "build": "pnpm run build:ci -- --dts --sourcemap",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path . --lerna-package svite",
     "release": "node ../../scripts/release.js"
@@ -34,11 +34,11 @@
   "homepage": "https://github.com/svitejs/svite/tree/main/packages/svite#readme",
   "dependencies": {
     "cac": "^6.7.12",
-    "chalk": "^4.1.2",
-    "degit": "2.8.4"
+    "chalk": "^5.0.1",
+    "degit": "^2.8.4"
   },
   "devDependencies": {
-    "@types/node": "^16.11.36",
-    "tsup": "^5.12.8"
+    "@types/node": "^17.0.40",
+    "tsup": "^6.0.1"
   }
 }

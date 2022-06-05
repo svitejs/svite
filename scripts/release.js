@@ -2,20 +2,22 @@
 /**
  * pretty verbatim copy of vites release script. https://github.com/vitejs/vite/blob/main/scripts/release.js
  */
-const execa = require('execa')
-const path = require('path')
-const fs = require('fs')
-const args = require('minimist')(process.argv.slice(2))
-const semver = require('semver')
-const chalk = require('chalk')
-const { prompt } = require('enquirer')
+import { execa } from 'execa'
+import path from 'path'
+import fs from 'fs'
+import minimist from 'minimist'
+import semver from 'semver'
+import chalk from 'chalk'
+import enquirer from 'enquirer'
+const { prompt } = enquirer
+const args = minimist(process.argv.slice(2))
 
 const pkgDir = process.cwd()
 const pkgPath = path.resolve(pkgDir, 'package.json')
 /**
  * @type {{ name: string, version: string }}
  */
-const pkg = require(pkgPath)
+const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
 const pkgName = pkg.name.replace(/^@svitejs\//, '')
 const currentVersion = pkg.version
 /**
@@ -131,7 +133,7 @@ async function main() {
   }
 
   step('\nGenerating changelog...')
-  await run('pnpm', ['changelog'])
+  await run('pnpm', ['run', 'changelog'])
 
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' })
   if (stdout) {
