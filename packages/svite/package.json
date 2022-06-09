@@ -39,6 +39,6 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.40",
-    "tsup": "^6.0.1"
+    "tsup": "^6.1.0"
   }
 }
