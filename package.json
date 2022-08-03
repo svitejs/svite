@@ -31,7 +31,7 @@
     "enquirer": "^2.3.6",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
