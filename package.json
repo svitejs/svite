@@ -21,7 +21,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@microsoft/api-extractor": "^7.28.3",
     "@types/fs-extra": "^9.0.13",
-    "@types/node": "^17.0.40",
+    "@types/node": "^18.7.2",
     "@types/semver": "^7.3.10",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
@@ -31,8 +31,8 @@
     "enquirer": "^2.3.6",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -51,19 +51,19 @@
     "slash": "^4.0.0",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended": "^8.0.0",
+    "stylelint-config-recommended": "^9.0.0",
     "svelte": "^3.48.0",
     "typescript": "^4.7.4",
-    "vite": "^2.9.13"
+    "vite": "^3.0.6"
   },
   "lint-staged": {
     "*.{js,ts,svelte,html,md,svx}": "eslint --fix",
     "*.{css,scss,html}": "stylelint --fix",
     "*.{css,scss,svelte,html,js,ts,svx,md}": "prettier --write --ignore-path .prettierignore"
   },
-  "packageManager": "pnpm@7.1.8",
+  "packageManager": "pnpm@7.9.0",
   "engines": {
-    "pnpm": "^7.1.0",
+    "pnpm": "^7.9.0",
     "yarn": "forbidden, use pnpm",
     "npm": "forbidden, use pnpm"
   },
