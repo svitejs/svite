@@ -8,11 +8,11 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.5",
     "pug": "^3.0.2",
-    "stylus": "^0.58.1",
-    "svelte": "^3.49.0",
+    "stylus": "^0.59.0",
+    "svelte": "^3.50.1",
     "svelte-preprocess": "^4.10.7",
-    "vite": "^3.0.7"
+    "vite": "^3.1.0"
   }
 }
