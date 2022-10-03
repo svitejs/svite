@@ -40,7 +40,7 @@ importers:
       rimraf: ^3.0.2
       semver: ^7.3.7
       sirv: ^2.0.2
-      slash: ^4.0.0
+      slash: ^5.0.0
       stylelint: ^14.11.0
       stylelint-config-prettier: ^9.0.3
       stylelint-config-recommended: ^9.0.0
@@ -79,7 +79,7 @@ importers:
       rimraf: 3.0.2
       semver: 7.3.7
       sirv: 2.0.2
-      slash: 4.0.0
+      slash: 5.0.0
       stylelint: 14.11.0
       stylelint-config-prettier: 9.0.3_stylelint@14.11.0
       stylelint-config-recommended: 9.0.0_stylelint@14.11.0
@@ -4854,9 +4854,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /slash/4.0.0:
-    resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
-    engines: {node: '>=12'}
+  /slash/5.0.0:
+    resolution: {integrity: sha512-n6KkmvKS0623igEVj3FF0OZs1gYYJ0o0Hj939yc1fyxl2xt+xYpLnzJB6xBSqOfV9ZFLEWodBBN/heZJahuIJQ==}
+    engines: {node: '>=14.16'}
     dev: true
 
   /slice-ansi/3.0.0:
@@ -5257,7 +5257,7 @@ packages:
       postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
       pug: ^3.0.0
       sass: ^1.26.8
-      stylus: ^0.55.0 || ^0.58.0
+      stylus: ^0.55.0 || ^0.59.0
       sugarss: ^2.0.0
       svelte: ^3.23.0
       typescript: ^3.9.5 || ^4.0.0
@@ -5308,7 +5308,7 @@ packages:
       postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
       pug: ^3.0.0
       sass: ^1.26.8
-      stylus: ^0.55.0 || ^0.58.0
+      stylus: ^0.55.0 || ^0.59.0
       sugarss: ^2.0.0
       svelte: ^3.23.0
       typescript: ^3.9.5 || ^4.0.0
@@ -5360,7 +5360,7 @@ packages:
       postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
       pug: ^3.0.0
       sass: ^1.26.8
-      stylus: ^0.55.0 || ^0.58.0
+      stylus: ^0.55.0 || ^0.59.0
       sugarss: ^2.0.0
       svelte: ^3.23.0
       typescript: ^3.9.5 || ^4.0.0

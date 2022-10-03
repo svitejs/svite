@@ -48,7 +48,7 @@
     "rimraf": "^3.0.2",
     "semver": "^7.3.7",
     "sirv": "^2.0.2",
-    "slash": "^4.0.0",
+    "slash": "^5.0.0",
     "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended": "^9.0.0",
