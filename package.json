@@ -37,7 +37,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-svelte3": "^4.0.0",
     "execa": "^6.0.0",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "minimist": "^1.2.7",
