@@ -121,7 +121,7 @@ importers:
       '@tsconfig/svelte': ^3.0.0
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -130,7 +130,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       svelte: 3.53.1
       svelte-check: 2.10.0_svelte@3.53.1
-      svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
+      svelte-preprocess: 5.0.0_7dvewpees4iyn2tkw2qzal77a4
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
@@ -141,14 +141,14 @@ importers:
       pug: ^3.0.2
       stylus: ^0.59.0
       svelte: ^3.53.1
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       vite: ^3.2.4
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.4.0_svelte@3.53.1+vite@3.2.4
       pug: 3.0.2
       stylus: 0.59.0
       svelte: 3.53.1
-      svelte-preprocess: 4.10.7_kjjazn6fd67hf2muegcfkwm7d4
+      svelte-preprocess: 5.0.0_kjjazn6fd67hf2muegcfkwm7d4
       vite: 3.2.4_stylus@0.59.0
 
   packages/templates/preprocess-auto-ts:
@@ -159,7 +159,7 @@ importers:
       stylus: ^0.59.0
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -170,7 +170,7 @@ importers:
       stylus: 0.59.0
       svelte: 3.53.1
       svelte-check: 2.10.0_kjjazn6fd67hf2muegcfkwm7d4
-      svelte-preprocess: 4.10.7_5d2nwzlgn73g5suxigdliswtyy
+      svelte-preprocess: 5.0.0_5d2nwzlgn73g5suxigdliswtyy
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4_stylus@0.59.0
@@ -201,7 +201,7 @@ importers:
       npm-run-all: ^4.1.5
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -214,7 +214,7 @@ importers:
       npm-run-all: 4.1.5
       svelte: 3.53.1
       svelte-check: 2.10.0_svelte@3.53.1
-      svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
+      svelte-preprocess: 5.0.0_7dvewpees4iyn2tkw2qzal77a4
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
@@ -229,7 +229,7 @@ importers:
       npm-run-all: ^4.1.5
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -243,7 +243,7 @@ importers:
       npm-run-all: 4.1.5
       svelte: 3.53.1
       svelte-check: 2.10.0_svelte@3.53.1
-      svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
+      svelte-preprocess: 5.0.0_7dvewpees4iyn2tkw2qzal77a4
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
@@ -258,7 +258,7 @@ importers:
       npm-run-all: ^4.1.5
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -272,7 +272,7 @@ importers:
       npm-run-all: 4.1.5
       svelte: 3.53.1
       svelte-check: 2.10.0_svelte@3.53.1
-      svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
+      svelte-preprocess: 5.0.0_7dvewpees4iyn2tkw2qzal77a4
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
@@ -298,7 +298,7 @@ importers:
       '@tsconfig/svelte': ^3.0.0
       svelte: ^3.53.1
       svelte-check: ^2.10.0
-      svelte-preprocess: ^4.10.7
+      svelte-preprocess: ^5.0.0
       tslib: ^2.4.1
       typescript: ^4.9.3
       vite: ^3.2.4
@@ -311,7 +311,7 @@ importers:
       '@tsconfig/svelte': 3.0.0
       svelte: 3.53.1
       svelte-check: 2.10.0_svelte@3.53.1
-      svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
+      svelte-preprocess: 5.0.0_7dvewpees4iyn2tkw2qzal77a4
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
@@ -956,10 +956,6 @@ packages:
     resolution: {integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==}
     dev: true
 
-  /@types/node/18.7.2:
-    resolution: {integrity: sha512-ce7MIiaYWCFv6A83oEultwhBXb22fxwNOQf5DIxWA4WXvDQ7K+L0fbWl/YOfCzlR5B/uFkSnVBhPcOfOECcWvA==}
-    dev: true
-
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -975,7 +971,7 @@ packages:
   /@types/sass/1.43.1:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
-      '@types/node': 18.7.2
+      '@types/node': 18.11.10
     dev: true
 
   /@types/semver/7.3.13:
@@ -3634,6 +3630,13 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /magic-string/0.27.0:
+    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
   /make-error/1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: true
@@ -3788,10 +3791,6 @@ packages:
       kind-of: 6.0.3
     dev: true
 
-  /minimist/1.2.6:
-    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: true
-
   /minimist/1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
     dev: true
@@ -3800,7 +3799,7 @@ packages:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
     hasBin: true
     dependencies:
-      minimist: 1.2.6
+      minimist: 1.2.7
     dev: true
 
   /modify-values/1.0.1:
@@ -4785,7 +4784,7 @@ packages:
     hasBin: true
     dependencies:
       buffer-crc32: 0.2.13
-      minimist: 1.2.6
+      minimist: 1.2.7
       sander: 0.5.1
       sourcemap-codec: 1.4.8
     dev: true
@@ -4813,6 +4812,7 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+    deprecated: Please use @jridgewell/sourcemap-codec instead
     dev: true
 
   /spdx-correct/3.1.1:
@@ -5243,21 +5243,20 @@ packages:
       typescript: 4.9.3
     dev: true
 
-  /svelte-preprocess/4.10.7_kjjazn6fd67hf2muegcfkwm7d4:
-    resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
-    engines: {node: '>= 9.11.2'}
+  /svelte-preprocess/5.0.0_5d2nwzlgn73g5suxigdliswtyy:
+    resolution: {integrity: sha512-q7lpa7i2FBu8Pa+G0MmuQQWETBwCKgsGmuq1Sf6n8q4uaG9ZLcLP0Y+etC6bF4sE6EbLxfiI38zV6RfPe3RSfg==}
+    engines: {node: '>= 14.10.0'}
     requiresBuild: true
     peerDependencies:
       '@babel/core': ^7.10.2
       coffeescript: ^2.5.1
       less: ^3.11.3 || ^4.0.0
-      node-sass: '*'
       postcss: ^7 || ^8
       postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
       pug: ^3.0.0
       sass: ^1.26.8
       stylus: ^0.55.0 || ^0.59.0
-      sugarss: ^2.0.0
+      sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
       svelte: ^3.23.0
       typescript: ^3.9.5 || ^4.0.0
     peerDependenciesMeta:
@@ -5266,8 +5265,6 @@ packages:
       coffeescript:
         optional: true
       less:
-        optional: true
-      node-sass:
         optional: true
       postcss:
         optional: true
@@ -5287,7 +5284,105 @@ packages:
       '@types/pug': 2.0.6
       '@types/sass': 1.43.1
       detect-indent: 6.1.0
-      magic-string: 0.25.9
+      magic-string: 0.27.0
+      pug: 3.0.2
+      sorcery: 0.10.0
+      strip-indent: 3.0.0
+      stylus: 0.59.0
+      svelte: 3.53.1
+      typescript: 4.9.3
+    dev: true
+
+  /svelte-preprocess/5.0.0_7dvewpees4iyn2tkw2qzal77a4:
+    resolution: {integrity: sha512-q7lpa7i2FBu8Pa+G0MmuQQWETBwCKgsGmuq1Sf6n8q4uaG9ZLcLP0Y+etC6bF4sE6EbLxfiI38zV6RfPe3RSfg==}
+    engines: {node: '>= 14.10.0'}
+    requiresBuild: true
+    peerDependencies:
+      '@babel/core': ^7.10.2
+      coffeescript: ^2.5.1
+      less: ^3.11.3 || ^4.0.0
+      postcss: ^7 || ^8
+      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+      pug: ^3.0.0
+      sass: ^1.26.8
+      stylus: ^0.55.0 || ^0.59.0
+      sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
+      svelte: ^3.23.0
+      typescript: ^3.9.5 || ^4.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      coffeescript:
+        optional: true
+      less:
+        optional: true
+      postcss:
+        optional: true
+      postcss-load-config:
+        optional: true
+      pug:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@types/pug': 2.0.6
+      '@types/sass': 1.43.1
+      detect-indent: 6.1.0
+      magic-string: 0.27.0
+      sorcery: 0.10.0
+      strip-indent: 3.0.0
+      svelte: 3.53.1
+      typescript: 4.9.3
+    dev: true
+
+  /svelte-preprocess/5.0.0_kjjazn6fd67hf2muegcfkwm7d4:
+    resolution: {integrity: sha512-q7lpa7i2FBu8Pa+G0MmuQQWETBwCKgsGmuq1Sf6n8q4uaG9ZLcLP0Y+etC6bF4sE6EbLxfiI38zV6RfPe3RSfg==}
+    engines: {node: '>= 14.10.0'}
+    requiresBuild: true
+    peerDependencies:
+      '@babel/core': ^7.10.2
+      coffeescript: ^2.5.1
+      less: ^3.11.3 || ^4.0.0
+      postcss: ^7 || ^8
+      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+      pug: ^3.0.0
+      sass: ^1.26.8
+      stylus: ^0.55.0 || ^0.59.0
+      sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
+      svelte: ^3.23.0
+      typescript: ^3.9.5 || ^4.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      coffeescript:
+        optional: true
+      less:
+        optional: true
+      postcss:
+        optional: true
+      postcss-load-config:
+        optional: true
+      pug:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@types/pug': 2.0.6
+      '@types/sass': 1.43.1
+      detect-indent: 6.1.0
+      magic-string: 0.27.0
       pug: 3.0.2
       sorcery: 0.10.0
       strip-indent: 3.0.0
