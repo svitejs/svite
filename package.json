@@ -45,7 +45,7 @@
     "postcss-html": "^1.5.0",
     "prettier": "^2.8.3",
     "prettier-plugin-svelte": "^2.9.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.3.0",
     "semver": "^7.3.8",
     "sirv": "^2.0.2",
     "slash": "^5.0.0",
