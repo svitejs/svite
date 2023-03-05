@@ -1,8 +1,7 @@
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { mdsvex } from 'mdsvex'
-import sveltePreprocess from 'svelte-preprocess'
-const { typescript } = sveltePreprocess
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default {
   extensions: ['.svelte', '.svx'],
@@ -15,6 +14,6 @@ export default {
         'MdsvexLayout.svelte'
       )
     }),
-    typescript()
+    vitePreprocess()
   ]
 }

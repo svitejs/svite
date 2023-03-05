@@ -1,7 +1,6 @@
-import sveltePreprocess from 'svelte-preprocess'
-const { typescript } = sveltePreprocess
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default {
   extensions: ['.svelte'],
-  preprocess: [typescript()]
+  preprocess: [vitePreprocess()]
 }
