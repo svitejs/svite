@@ -9,7 +9,7 @@
     "validate": "svelte-check"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.4.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@tsconfig/svelte": "^3.0.0",
     "pug": "^3.0.2",
     "stylus": "^0.59.0",
