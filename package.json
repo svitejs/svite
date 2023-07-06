@@ -52,7 +52,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended": "^9.0.0",
-    "svelte": "^3.59.0",
+    "svelte": "^4.0.5",
     "typescript": "^5.0.4",
     "vite": "^3.2.6"
   },
