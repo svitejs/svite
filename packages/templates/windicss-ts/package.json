@@ -14,12 +14,12 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.4.0",
     "@tsconfig/svelte": "^3.0.0",
-    "svelte": "^3.59.0",
-    "svelte-check": "^3.3.1",
-    "svelte-preprocess": "^5.0.3",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.4",
-    "vite": "^3.2.6",
-    "vite-plugin-windicss": "^1.8.10"
+    "svelte": "^3.59.2",
+    "svelte-check": "^3.4.5",
+    "svelte-preprocess": "^5.0.4",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6",
+    "vite": "^3.2.7",
+    "vite-plugin-windicss": "^1.9.0"
   }
 }
